@@ -100,6 +100,19 @@ namespace AjustaNomes
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string folderPath = "c:\\";
+            FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
+            folderPath = "c:\\";
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                folderPath = folderBrowserDialog1.SelectedPath;
+            }
+
+            txtPasta.Text = folderPath;
+        }
     }
 }
 
